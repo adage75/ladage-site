@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Adage — Conseil en voyage sur mesure · New York, Londres</title>
+<meta name="description" content="L'Adage conçoit des carnets de voyage sur mesure pour New York et Londres. Un voyage entièrement pensé, sans charge de planification. Conseil en voyage, sans vente de voyages.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232E3B31'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23C9A461'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --vert:#2E3B31; --ivoire:#F4EFE4; --laiton:#A8823C; --laiton-clair:#C9A461;
+  --encre:#1f2721; --doux:#5f675f; --filet:#d9d1bf;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivoire);color:var(--encre);font:18px/1.65 var(--serif)}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+
+/* En-tête */
+header.hero{background:var(--vert);color:var(--ivoire);text-align:center;padding:88px 20px 96px}
+.mono{display:inline-grid;place-items:center;width:64px;height:64px;border:1px solid var(--laiton-clair);border-radius:50%;color:var(--laiton-clair);font-size:30px;letter-spacing:0;margin-bottom:28px}
+h1{font-weight:400;font-size:clamp(44px,9vw,72px);line-height:1.05;margin:0;letter-spacing:.01em}
+.sous{margin:14px 0 0;color:var(--laiton-clair);font-size:15px;letter-spacing:.22em;text-transform:uppercase}
+.promesse{margin:40px auto 0;max-width:30ch;font-size:clamp(22px,4vw,28px);font-style:italic;line-height:1.4}
+.filet{width:56px;height:1px;background:var(--laiton-clair);margin:36px auto 0;border:0}
+
+/* Sections */
+section{padding:72px 0;border-bottom:1px solid var(--filet)}
+section:last-of-type{border-bottom:0}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--laiton);margin:0 0 14px}
+h2{font-weight:400;font-size:clamp(28px,5vw,36px);line-height:1.2;margin:0 0 22px}
+p{margin:0 0 16px}
+.note{color:var(--doux);font-size:16px;border-left:2px solid var(--laiton);padding-left:16px;margin-top:24px}
+
+ol.etapes{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:26px;counter-reset:e}
+ol.etapes li{display:grid;grid-template-columns:44px 1fr;gap:14px;counter-increment:e}
+ol.etapes li::before{content:counter(e,upper-roman);color:var(--laiton);font-size:20px;line-height:1.5;text-align:right}
+ol.etapes b{font-weight:600;display:block}
+ol.etapes span{color:var(--doux);font-size:17px}
+
+.destinations{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.destinations div{border:1px solid var(--filet);padding:22px 22px 18px;background:#f8f4ec}
+.destinations h3{font-weight:400;font-size:24px;margin:0 0 6px}
+.destinations p{color:var(--doux);font-size:16px;margin:0}
+
+.contact{background:var(--vert);color:var(--ivoire);text-align:center}
+.contact .eyebrow{color:var(--laiton-clair)}
+.contact a.mail{display:inline-block;margin-top:10px;font-size:clamp(20px,4vw,24px);color:var(--laiton-clair);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.contact p.alt{margin-top:22px;font-size:16px;opacity:.85}
+
+footer{background:var(--vert);color:rgba(244,239,228,.85);text-align:center;font-size:14px;padding:0 20px 40px}
+footer a{color:var(--laiton-clair)}
+a:focus-visible{outline:2px solid var(--laiton);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mono" aria-hidden="true">A</div>
+  <h1>L'Adage</h1>
+  <p class="sous">Conseil en voyage sur mesure</p>
+  <p class="promesse">Un voyage entièrement pensé, pour que vous n'ayez plus qu'à le vivre.</p>
+  <hr class="filet">
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="t-metier">
+    <p class="eyebrow">Notre métier</p>
+    <h2 id="t-metier">La sérénité, du premier jour au dernier</h2>
+    <p>Nous concevons pour vous un carnet de voyage sur mesure : un programme jour par jour, pensé selon vos envies et votre rythme, avec des adresses que nous avons choisies une à une.</p>
+    <p>Vous n'avez plus à comparer, trier ni planifier. Vous partez avec un voyage déjà réfléchi.</p>
+    <p class="note">L'Adage est un service de conseil. Nous ne vendons ni voyage, ni transport, ni hébergement : vous réservez vous-même, en suivant nos recommandations.</p>
+  </section>
+
+  <section aria-labelledby="t-dest">
+    <p class="eyebrow">Destinations</p>
+    <h2 id="t-dest">Deux villes, une même exigence</h2>
+    <div class="destinations">
+      <div><h3>New York</h3><p>Quartiers, tables et moments choisis, loin du programme que tout le monde suit.</p></div>
+      <div><h3>Londres</h3><p>La ville telle qu'on aime la vivre, au fil de journées pensées pour vous.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-etapes">
+    <p class="eyebrow">Comment nous travaillons</p>
+    <h2 id="t-etapes">Quatre temps, simplement</h2>
+    <ol class="etapes">
+      <li><div><b>Un échange pour vous connaître</b><span>Vos envies, votre rythme, ce que vous ne voulez surtout pas.</span></div></li>
+      <li><div><b>Un devis clair</b><span>Un tarif par itinéraire, réglé en plusieurs fois.</span></div></li>
+      <li><div><b>Votre carnet</b><span>Un programme complet, présenté et ajusté avec vous avant le départ.</span></div></li>
+      <li><div><b>Un concierge pendant le séjour</b><span>Sur WhatsApp, un concierge assisté par intelligence artificielle adapte votre programme à partir de votre carnet : pluie, fatigue, envie soudaine.</span></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="t-nous">
+    <p class="eyebrow">Qui sommes-nous</p>
+    <h2 id="t-nous">Eva et Martin</h2>
+    <p>L'Adage est né de deux fondateurs qui aiment préparer les voyages autant que les vivre, et qui ont voulu offrir à d'autres ce que l'on ne trouve pas dans un guide : un voyage pensé pour soi.</p>
+  </section>
+
+</main>
+
+<section class="contact" aria-labelledby="t-contact">
+  <div class="wrap">
+    <p class="eyebrow">Nous écrire</p>
+    <h2 id="t-contact">Parlons de votre prochain voyage</h2>
+    <a class="mail" href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 L'Adage · <a href="mentions-legales.html">Mentions légales</a></p>
+</footer>
+
+</body>
+</html>
