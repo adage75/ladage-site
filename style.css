@@ -1,0 +1,175 @@
+/* L’Adage — feuille de style du site.
+   Charte : vert profond et ivoire, laiton pour les ornements, bronze pour le petit texte doré,
+   une seule famille (Spectral), sections numérotées « nº » suivies d’un filet. */
+
+@font-face{font-family:"Spectral";src:url("fonts/spectral-300.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Spectral";src:url("fonts/spectral-300i.woff2") format("woff2");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"Spectral";src:url("fonts/spectral-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Spectral";src:url("fonts/spectral-400i.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Spectral";src:url("fonts/spectral-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Spectral";src:url("fonts/spectral-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Spectral SC";src:url("fonts/spectral-sc-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+
+:root{
+  --vert:#2E3B31; --vert-gris:#5F7361; --ivoire:#F4EFE4; --ivoire-clair:#F8F4EC;
+  --laiton:#A8823C; --laiton-clair:#C9A461; --bronze:#86662A;
+  --encre:#22242B; --gris-vert:#5F675F; --filet:#D9D1BF; --erreur:#9A3B2E;
+  --serif:"Spectral","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sc:"Spectral SC","Spectral",Georgia,serif;
+  --large:1040px; --texte:66ch;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--ivoire);color:var(--encre);font:400 18px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+a{color:var(--vert);text-decoration-color:var(--laiton);text-underline-offset:4px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.vert :focus-visible{outline-color:var(--laiton-clair)}
+h1,h2,h3{font-weight:500;margin:0;text-wrap:balance}
+h2{font-size:clamp(28px,4.4vw,40px);line-height:1.15}
+h3{font-size:22px;line-height:1.3}
+p{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.evite{position:absolute;left:-9999px}
+.in{max-width:var(--large);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.vert{background:var(--vert);color:var(--ivoire)}
+.vert a{color:var(--ivoire);text-decoration-color:var(--laiton-clair)}
+.aller{position:absolute;left:12px;top:-60px;background:var(--ivoire);color:var(--vert);padding:10px 16px;z-index:50}
+.aller:focus{top:12px}
+
+/* Logo : mot-symbole en attendant les fichiers vectoriels de la planche */
+.logo{font:500 22px/1 var(--serif);letter-spacing:.2em;text-decoration:none;color:inherit;white-space:nowrap;display:inline-flex;align-items:center;min-height:44px}
+.logo .ap{color:var(--laiton-clair)}
+
+/* En-tête */
+.entete{padding-block:14px}
+.entete .in{display:flex;align-items:center;justify-content:space-between;gap:12px 28px;flex-wrap:wrap}
+.nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-size:16px}
+.nav a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center;border-bottom:1px solid transparent}
+.nav a:hover,.nav a[aria-current="page"]{border-bottom-color:var(--laiton-clair)}
+@media (max-width:640px){.nav{width:100%;justify-content:space-between;gap:0 14px;font-size:15px}}
+
+/* Numéro de section et filet */
+.no{display:flex;align-items:center;gap:14px;font-family:var(--sc);font-weight:500;font-size:15px;letter-spacing:.06em;text-transform:lowercase;color:var(--bronze)}
+.no::after{content:"";width:44px;height:1px;background:var(--laiton)}
+.vert .no{color:var(--laiton-clair)}
+.vert .no::after{background:var(--laiton-clair)}
+
+/* Boutons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;font:500 17px/1.2 var(--serif);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.btn-p{background:var(--vert);color:var(--ivoire)}
+.btn-p:hover{background:var(--encre)}
+.btn-s{border-color:var(--vert);color:var(--vert);background:transparent}
+.btn-s:hover{background:var(--vert);color:var(--ivoire)}
+.vert .btn-p{background:var(--laiton-clair);color:var(--vert)}
+.vert .btn-p:hover{background:var(--ivoire)}
+.vert .btn-s{border-color:var(--ivoire);color:var(--ivoire)}
+.vert .btn-s:hover{background:var(--ivoire);color:var(--vert)}
+.btn[disabled]{opacity:.6;cursor:progress}
+
+/* Ouverture de page */
+.ouverture{padding-block:56px 72px}
+.ouverture .in{display:grid;gap:24px}
+.ouverture h1{font-weight:300;font-size:clamp(34px,6vw,60px);line-height:1.12;max-width:20ch}
+.ouverture h1 em{font-style:italic;color:var(--laiton-clair)}
+.ouverture .chapo{font-size:clamp(18px,2.2vw,21px);max-width:52ch;opacity:.92}
+.ouverture .signe{color:var(--laiton-clair);font-size:16px}
+.bandeau{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;border-top:1px solid rgba(201,164,97,.5);padding-top:18px;margin-top:8px;font-size:16px}
+.bandeau b{font-weight:500;color:var(--laiton-clair)}
+
+/* Sections */
+.section{padding-block:76px;border-bottom:1px solid var(--filet)}
+.section:last-of-type{border-bottom:0}
+.tete{display:grid;gap:12px;margin-bottom:34px;max-width:var(--texte)}
+.tete p{color:var(--gris-vert)}
+.prose{max-width:var(--texte);display:grid;gap:16px}
+
+/* Tri à froid */
+.citation{margin:0;font-size:clamp(24px,3.4vw,34px);font-weight:300;font-style:italic;line-height:1.35;max-width:30ch}
+.citation+.prose{margin-top:28px}
+
+/* Méthode : avant, pendant, après */
+.temps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--filet);border:1px solid var(--filet)}
+.temps>div{background:var(--ivoire-clair);padding:28px 26px;display:grid;gap:10px;align-content:start}
+.temps .quand{font-family:var(--sc);font-weight:500;letter-spacing:.06em;text-transform:lowercase;color:var(--bronze);font-size:15px}
+.temps p{color:var(--gris-vert);font-size:16.5px}
+@media (max-width:760px){.temps{grid-template-columns:1fr}}
+
+/* Villes */
+.villes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ville{border:1px solid var(--filet);background:var(--ivoire-clair);padding:28px 26px;display:grid;gap:10px}
+.ville h3{font-size:30px;font-weight:400}
+.ville p{color:var(--gris-vert);font-size:16.5px}
+@media (max-width:640px){.villes{grid-template-columns:1fr}}
+
+/* À deux voix */
+.voix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--filet);border:1px solid var(--filet)}
+.voix figure{margin:0;background:var(--ivoire-clair);padding:28px 26px;display:grid;gap:10px;align-content:start}
+.voix blockquote{margin:0;font-size:21px;line-height:1.45}
+.voix figcaption{font-family:var(--sc);font-weight:500;font-size:15px;letter-spacing:.06em;text-transform:lowercase;color:var(--bronze)}
+.voix .note{grid-column:1/-1;background:var(--ivoire);padding:16px 26px;color:var(--gris-vert);font-size:16px}
+@media (max-width:640px){.voix{grid-template-columns:1fr}}
+
+/* Étapes */
+.etapes{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--filet);counter-reset:e}
+.etapes li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid var(--filet);counter-increment:e}
+.etapes li::before{content:counter(e,upper-roman);color:var(--laiton);font-size:24px;line-height:1.2}
+.etapes b{font-weight:600;display:block}
+.etapes span{color:var(--gris-vert);font-size:16.5px}
+.precision{margin-top:24px;color:var(--gris-vert);font-size:16px;border-left:2px solid var(--laiton);padding-left:16px;max-width:var(--texte)}
+
+/* Appel */
+.appel{padding-block:72px}
+.appel .in{display:grid;gap:20px;justify-items:start}
+.appel h2{max-width:22ch}
+.appel p{max-width:52ch;opacity:.92}
+
+/* Pied de page */
+.pied{padding-block:28px 40px;font-size:15px;color:rgba(244,239,228,.85)}
+.pied .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+.pied nav{display:flex;flex-wrap:wrap;gap:0 18px}
+.pied a{min-height:44px;display:inline-flex;align-items:center}
+
+/* Page Les premiers volumes */
+.trois{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.trois>div{border-top:1px solid var(--vert);padding-top:14px;display:grid;gap:8px;align-content:start}
+.trois p{color:var(--gris-vert);font-size:16.5px}
+@media (max-width:760px){.trois{grid-template-columns:1fr}}
+.dates{display:grid;border-top:1px solid var(--filet);max-width:640px}
+.dates>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--filet)}
+.dates dt{font-weight:500;font-variant-numeric:tabular-nums}
+.dates dd{margin:0;color:var(--gris-vert)}
+@media (max-width:520px){.dates>div{grid-template-columns:1fr;gap:2px}}
+
+/* Formulaire */
+.form{display:grid;gap:28px;max-width:680px}
+.champ{display:grid;gap:8px}
+.champ>label,.champ>legend,.champ .label{font-weight:500;font-size:18px;padding:0}
+.champ .num{font-family:var(--sc);font-size:15px;color:var(--bronze);margin-right:8px}
+.aide{color:var(--gris-vert);font-size:15.5px}
+fieldset.champ{border:0;margin:0;padding:0;min-width:0}
+input[type=text],input[type=email],input[type=date],select,textarea{width:100%;min-height:48px;padding:10px 14px;font:400 17px/1.4 var(--serif);color:var(--encre);background:#fff;border:1px solid #8F8A7E;border-radius:0;transition:border-color .2s}
+textarea{min-height:132px;resize:vertical}
+input:hover,select:hover,textarea:hover{border-color:var(--vert)}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--bronze);outline-offset:1px;border-color:var(--vert)}
+.choix{display:flex;flex-wrap:wrap;gap:10px}
+.choix label{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;border:1px solid #8F8A7E;background:#fff;cursor:pointer;font-size:17px}
+.choix input{width:18px;height:18px;accent-color:var(--vert);margin:0}
+.choix label:has(input:checked){border-color:var(--vert);background:var(--ivoire-clair);box-shadow:inset 0 0 0 1px var(--vert)}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.duo label{font-size:15.5px;color:var(--gris-vert);display:grid;gap:6px}
+@media (max-width:520px){.duo{grid-template-columns:1fr}}
+.case{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start;font-size:16px}
+.case input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--vert)}
+.erreur{color:var(--erreur);font-size:15.5px}
+.erreur:empty{display:none}
+[aria-invalid="true"]{border-color:var(--erreur)!important;box-shadow:inset 0 0 0 1px var(--erreur)}
+.envoi{display:grid;gap:12px;justify-items:start}
+.retour{padding:22px 24px;border:1px solid var(--vert);background:var(--ivoire-clair);display:grid;gap:8px;max-width:680px}
+.retour.ko{border-color:var(--erreur)}
+.retour h3{font-size:22px}
+.clos{padding:22px 24px;border:1px solid var(--filet);background:var(--ivoire-clair);max-width:680px;display:grid;gap:8px}
