@@ -173,3 +173,28 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
 .retour.ko{border-color:var(--erreur)}
 .retour h3{font-size:22px}
 .clos{padding:22px 24px;border:1px solid var(--filet);background:var(--ivoire-clair);max-width:680px;display:grid;gap:8px}
+
+/* Accueil centré sur l’offre */
+.atouts{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:16px}
+.atouts li{display:flex;align-items:center;gap:8px}
+.atouts li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--laiton-clair)}
+.inclus{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--filet);border:1px solid var(--filet)}
+.inclus li{background:var(--ivoire-clair);padding:22px 24px;display:grid;grid-template-columns:24px minmax(0,1fr);gap:14px;align-items:start}
+.inclus svg{width:24px;height:24px;color:var(--vert);margin-top:3px}
+.inclus b{font-weight:600;display:block}
+.inclus span{color:var(--gris-vert);font-size:16.5px}
+@media (max-width:700px){.inclus{grid-template-columns:1fr}}
+.offre{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:20px 40px;align-items:start;border:1px solid var(--vert);background:var(--ivoire-clair);padding:32px 30px}
+.offre .btn{grid-column:2;justify-self:start}
+.prix{display:grid;gap:4px}
+.montant{font-size:20px;color:var(--gris-vert)}
+.montant b{display:block;font-size:52px;line-height:1.05;font-weight:500;color:var(--vert)}
+.liste{margin:0;padding-left:20px;display:grid;gap:8px}
+@media (max-width:700px){.offre{grid-template-columns:1fr}.offre .btn{grid-column:1}}
+.faq{display:grid;border-top:1px solid var(--filet);max-width:780px}
+.faq details{border-bottom:1px solid var(--filet)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:12px 0;font-weight:500;font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;color:var(--laiton);line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 18px;color:var(--gris-vert);max-width:var(--texte)}
