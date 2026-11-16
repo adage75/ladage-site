@@ -7,7 +7,7 @@ Site vitrine de L'Adage, publié sur https://ladage-voyage.fr via GitHub Pages.
 - `style.css`, `fonts/` : charte graphique, police Spectral hébergée sur le site
 - `form.js` : vérification et envoi du formulaire de candidature
 - `mentions-legales.html` : mentions légales et données personnelles
-- `confidentialite.html` : politique de confidentialité du concierge
+- `confidentialite.html` : politique de confidentialité complète (candidatures, devis, paiements, carnet, concierge)
 - `CNAME` : domaine personnalisé
 
 Aucun cookie, aucun outil de mesure, aucune police externe.
