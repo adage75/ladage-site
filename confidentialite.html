@@ -13,85 +13,136 @@
 body{margin:0;background:var(--ivoire);color:var(--encre);font:17px/1.65 var(--serif)}
 header{background:var(--vert);color:var(--ivoire);padding:28px 20px;text-align:center}
 header a{color:var(--laiton-clair);text-decoration:none;font-size:26px}
-.wrap{max-width:720px;margin:0 auto;padding:48px 20px 64px}
+.wrap{max-width:760px;margin:0 auto;padding:48px 20px 64px}
 h1{font-weight:400;font-size:34px;margin:0 0 28px}
 h2{font-weight:400;font-size:22px;margin:36px 0 10px;color:var(--vert);border-top:1px solid var(--filet);padding-top:24px}
 p{margin:0 0 10px}
-dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 18px}
-dt{color:var(--doux)}
-dd{margin:0}
 a{color:var(--vert)}
 ul{margin:0 0 10px;padding-left:22px}li{margin:0 0 4px}
+table{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:15px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:8px 10px 8px 0;border-bottom:1px solid var(--filet)}
+th{font-weight:400;color:var(--doux)}
 footer{text-align:center;font-size:14px;color:var(--doux);padding:0 20px 40px}
-@media (max-width:520px){dl{grid-template-columns:1fr}dt{margin-top:8px}}
+@media (max-width:600px){
+  table,thead,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-9999px}
+  tr{border-bottom:1px solid var(--filet);padding:8px 0}
+  td{border:0;padding:2px 0}
+  td::before{content:attr(data-l) " : ";color:var(--doux)}
+  td:first-child{font-weight:600}
+  td:first-child::before{content:none}
+}
 </style>
 </head>
 <body>
 <header><a href="./">L'Adage</a></header>
 <main class="wrap">
   <h1>Politique de confidentialité</h1>
-  <p><em>Dernière mise à jour : 21 novembre 2026</em></p>
+  <p><em>Dernière mise à jour : 22 novembre 2026</em></p>
 
-  <h2>Qui est responsable de vos données</h2>
-  <p>L'Adage est un service de conseil en voyage édité par Pointeau Eva, entrepreneur individuel (EI, micro-entreprise), SIRET 131 158 313 00018, 87B Rue Blomet, 75015 Paris. Elle est responsable du traitement de vos données. Contact : <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>.</p>
+  <h2>1. Qui est responsable de vos données</h2>
+  <p>Le responsable du traitement est Eva Pointeau, entrepreneur individuel (EI, micro-entreprise), exerçant sous le nom commercial L'Adage. SIRET : 131 158 313 00018. Adresse : 87B rue Blomet, 75015 Paris. Contact : <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>.</p>
+  <p>L'Adage n'a pas désigné de délégué à la protection des données (DPO), cette désignation n'étant pas obligatoire pour son activité. Toute question sur vos données peut être adressée à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>.</p>
+  <p>L'Adage conçoit des carnets de voyage sur mesure pour New York et Londres. Nous ne vendons ni billets ni réservations : vous réservez vous-même. Vos données ne sont ni vendues ni utilisées à des fins publicitaires.</p>
 
-  <h2>Ce que nous faisons de vos données</h2>
-  <p>L'Adage conçoit des carnets de voyage sur mesure pour New York et Londres. Nous ne vendons ni billets ni réservations : vous réservez vous-même. Nous ne collectons que ce qui est utile pour vous conseiller. Vos données ne sont ni vendues ni utilisées à des fins publicitaires.</p>
+  <h2>2. Ce que nous faisons de vos données, et sur quelle base</h2>
+  <table>
+    <thead><tr><th>Traitement</th><th>Données</th><th>Base légale (RGPD)</th></tr></thead>
+    <tbody>
+      <tr><td>Étude de votre candidature ou de votre demande</td><td data-l="Données">Prénoms, destination, dates, ce qui vous inquiète, comment vous nous avez connus, coordonnées</td><td data-l="Base légale">Mesures précontractuelles prises à votre demande (art. 6.1.b)</td></tr>
+      <tr><td>Devis et contrat</td><td data-l="Données">Identité, coordonnées, voyageurs, dates</td><td data-l="Base légale">Exécution du contrat (art. 6.1.b)</td></tr>
+      <tr><td>Facturation et comptabilité</td><td data-l="Données">Identité, montants, factures</td><td data-l="Base légale">Obligation légale (art. 6.1.c)</td></tr>
+      <tr><td>Paiement en trois fois par carte : 50 % à l'acceptation du devis, 25 % à la remise du carnet, 25 % le lendemain de la fin du séjour</td><td data-l="Données">Moyen de paiement (collecté par Stripe), montants, dates et statuts des échéances</td><td data-l="Base légale">Exécution du contrat (art. 6.1.b)</td></tr>
+      <tr><td>Conception de votre carnet de voyage</td><td data-l="Données">Prénoms, destination, dates, hôtel, heures d'arrivée et de départ, goûts, rythme, budget</td><td data-l="Base légale">Exécution du contrat (art. 6.1.b)</td></tr>
+      <tr><td>Concierge WhatsApp pendant le séjour</td><td data-l="Données">Prénom, numéro WhatsApp, messages, informations de voyage</td><td data-l="Base légale">Exécution du contrat (art. 6.1.b)</td></tr>
+      <tr><td>Supervision des réponses du concierge par l'équipe</td><td data-l="Données">Messages échangés</td><td data-l="Base légale">Intérêt légitime : qualité et fiabilité du service (art. 6.1.f)</td></tr>
+      <tr><td>Suivi des clients après le voyage, pour un prochain voyage</td><td data-l="Données">Carnet, informations de voyage</td><td data-l="Base légale">Intérêt légitime : fidélisation (art. 6.1.f)</td></tr>
+      <tr><td>Sécurité du site et du serveur</td><td data-l="Données">Adresse IP, journaux techniques</td><td data-l="Base légale">Intérêt légitime : sécurité (art. 6.1.f)</td></tr>
+      <tr><td>Conservation de vos préférences de voyage</td><td data-l="Données">Préférences</td><td data-l="Base légale">Consentement (art. 6.1.a)</td></tr>
+      <tr><td>Témoignages, extraits d'échanges, photos</td><td data-l="Données">Texte, capture, image</td><td data-l="Base légale">Consentement, un par usage (art. 6.1.a)</td></tr>
+      <tr><td>Réponse à vos demandes d'exercice de droits</td><td data-l="Données">Identité, demande, réponse</td><td data-l="Base légale">Obligation légale (art. 6.1.c)</td></tr>
+    </tbody>
+  </table>
+  <p>Les données nécessaires au devis, au contrat et au paiement sont obligatoires : sans elles, nous ne pouvons pas organiser votre voyage. Les autres sont facultatives. Lorsque nous nous fondons sur notre intérêt légitime, vous pouvez vous y opposer à tout moment (section 9).</p>
+
+  <h2>3. Données de santé</h2>
+  <p>Nous ne demandons aucune donnée de santé, ni dans nos formulaires, ni lors de la préparation du carnet, ni par le concierge. Merci de ne pas en indiquer. Pour un besoin particulier, écrivez directement à l'équipe à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a> : votre carnet n'en mentionne que la conséquence pratique (par exemple « adresses sans gluten »), jamais la raison.</p>
+  <p>Si vous évoquez spontanément votre santé au concierge (par exemple pour trouver une pharmacie), il vous répond, mais cette information n'est jamais enregistrée dans vos préférences. Elle est effacée avec l'historique des échanges (section 7).</p>
+
+  <h2>4. Le concierge : une intelligence artificielle</h2>
+  <p>Le concierge WhatsApp de L'Adage est <strong>un assistant d'intelligence artificielle</strong>. Il vous le dit dès son premier message. Il est compris dans les offres Carnet + Concierge et L'Écrin et fonctionne pendant les dates de votre séjour. Ses réponses sont générées automatiquement à partir du carnet de voyage préparé avec vous, par un modèle fourni par Anthropic (États-Unis). Anthropic n'utilise pas ces échanges pour entraîner ses modèles. Il les supprime sous 30 jours, ou les conserve jusqu'à 2 ans si ses systèmes de sécurité signalent un message.</p>
+  <p>Le concierge peut vous suggérer des changements de programme. Il ne réserve rien et ne paie rien à votre place. Ses suggestions (horaires, ouvertures, itinéraires) peuvent contenir des erreurs : vérifiez les informations importantes avant de vous déplacer.</p>
+  <p>L'équipe L'Adage peut lire vos échanges avec le concierge et intervenir à tout moment. Ses messages commencent par « Message de l'équipe L'Adage : ». Pour parler directement à un membre de l'équipe, écrivez à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>.</p>
+  <p>Aucune décision produisant des effets juridiques ou vous affectant de manière significative n'est prise de façon entièrement automatisée (article 22 du RGPD).</p>
+  <p>Données traitées par le concierge : votre prénom, votre numéro WhatsApp, la date à laquelle vous avez attesté être majeur (jamais votre date de naissance), le contenu des messages et les informations de votre voyage. Vos préférences de voyage ne sont conservées que si vous l'acceptez séparément (section 8).</p>
+
+  <h2>5. Service réservé aux majeurs</h2>
+  <p>Dans cette première version, le concierge est réservé au voyageur principal, dont le numéro WhatsApp figure au devis, et qui doit être majeur. Vous l'attestez en signant le devis. Nous enregistrons uniquement la date de cette attestation, jamais votre date de naissance.</p>
+  <p>Les messages venant d'un autre numéro que celui du voyageur principal ne reçoivent pas de réponse et sont supprimés sans être utilisés.</p>
+
+  <h2>6. Destinataires, prestataires et transferts hors de l'Union européenne</h2>
+  <p>Seule l'équipe L'Adage a accès à vos données. Nous faisons appel aux prestataires suivants, qui les traitent pour notre compte et selon nos instructions, sauf mention contraire.</p>
+  <table>
+    <thead><tr><th>Prestataire</th><th>Rôle</th><th>Lieu de traitement</th><th>Garantie en cas de transfert hors UE</th></tr></thead>
+    <tbody>
+      <tr><td>OVHcloud</td><td data-l="Rôle">Hébergement du serveur du concierge et des sauvegardes</td><td data-l="Lieu">France</td><td data-l="Garantie">Aucun transfert</td></tr>
+      <tr><td>Supabase</td><td data-l="Rôle">Base de données du concierge</td><td data-l="Lieu">Paris (UE) ; société américaine, accès possible depuis les États-Unis pour le support</td><td data-l="Garantie">Clauses contractuelles types</td></tr>
+      <tr><td>Anthropic</td><td data-l="Rôle">Mise en forme des carnets, réponses du concierge</td><td data-l="Lieu">États-Unis</td><td data-l="Garantie">Clauses contractuelles types</td></tr>
+      <tr><td>Meta (WhatsApp)</td><td data-l="Rôle">Messagerie du concierge</td><td data-l="Lieu">UE et États-Unis</td><td data-l="Garantie">Conditions de traitement des données de WhatsApp Business</td></tr>
+      <tr><td>Meta (Instagram)</td><td data-l="Rôle">Compte @ladage.travel</td><td data-l="Lieu">UE et États-Unis</td><td data-l="Garantie">Responsable conjoint, voir ci-dessous</td></tr>
+      <tr><td>Stripe</td><td data-l="Rôle">Paiement en trois fois</td><td data-l="Lieu">Irlande et États-Unis</td><td data-l="Garantie">Data Privacy Framework</td></tr>
+      <tr><td>Google</td><td data-l="Rôle">E-mail, stockage des carnets et des devis, alertes internes</td><td data-l="Lieu">UE et États-Unis</td><td data-l="Garantie">Garanties prévues par les conditions de Google</td></tr>
+      <tr><td>GitHub</td><td data-l="Rôle">Hébergement du site (aucune donnée de client)</td><td data-l="Lieu">États-Unis</td><td data-l="Garantie">Garanties prévues par les conditions de GitHub</td></tr>
+    </tbody>
+  </table>
+  <p>Le Data Privacy Framework est le cadre reconnu par la Commission européenne (décision d'adéquation du 10 juillet 2023) pour les entreprises américaines certifiées. Les clauses contractuelles types sont des contrats approuvés par la Commission européenne. Vous pouvez nous demander une copie de ces garanties.</p>
+  <p>Pour notre compte Instagram, Meta et L'Adage sont responsables conjoints des statistiques de fréquentation. Stripe agit en outre comme responsable de traitement distinct pour la lutte contre la fraude et ses obligations réglementaires.</p>
+
+  <h2>7. Durées de conservation</h2>
+  <table>
+    <thead><tr><th>Données</th><th>Durée</th><th>Justification</th></tr></thead>
+    <tbody>
+      <tr><td>Candidature non retenue</td><td data-l="Durée">6 mois après la fin de la sélection</td><td data-l="Justification">Pouvoir répondre à une réclamation</td></tr>
+      <tr><td>Demande restée sans suite, messages Instagram</td><td data-l="Durée">12 mois après le dernier contact</td><td data-l="Justification">Suivi de la demande</td></tr>
+      <tr><td>Devis et contrat</td><td data-l="Durée">10 ans après la conclusion du contrat</td><td data-l="Justification">Code de la consommation, art. L213-1 et D213-2 (contrat en ligne de 120 € ou plus)</td></tr>
+      <tr><td>Factures et pièces comptables</td><td data-l="Durée">10 ans</td><td data-l="Justification">Code de commerce, art. L123-22</td></tr>
+      <tr><td>Carte enregistrée chez Stripe</td><td data-l="Durée">Jusqu'à la dernière échéance payée ou la fin du contrat</td><td data-l="Justification">Paiement en trois fois</td></tr>
+      <tr><td>Historique des paiements</td><td data-l="Durée">10 ans</td><td data-l="Justification">Obligation comptable</td></tr>
+      <tr><td>Carnet de voyage et informations de préparation</td><td data-l="Durée">3 ans après le voyage, sauf demande de suppression</td><td data-l="Justification">Fidélisation, pour préparer un prochain voyage</td></tr>
+      <tr><td>Échanges avec le concierge</td><td data-l="Durée">12 mois après le message</td><td data-l="Justification">Traitement d'une réclamation</td></tr>
+      <tr><td>Prénom, numéro WhatsApp, date d'attestation de majorité, informations de voyage utilisées par le concierge</td><td data-l="Durée">3 ans après la fin de votre dernier voyage</td><td data-l="Justification">Lien avec le carnet, pour un prochain voyage</td></tr>
+      <tr><td>Préférences de voyage (si acceptées)</td><td data-l="Durée">Jusqu'au retrait du consentement, au plus 3 ans après le dernier voyage</td><td data-l="Justification">Consentement</td></tr>
+      <tr><td>Témoignages, extraits, photos</td><td data-l="Durée">2 ans après publication, puis nouveau consentement</td><td data-l="Justification">Consentement</td></tr>
+      <tr><td>Demandes d'exercice des droits</td><td data-l="Durée">5 ans</td><td data-l="Justification">Preuve de la réponse</td></tr>
+      <tr><td>Journaux techniques du serveur</td><td data-l="Durée">7 jours</td><td data-l="Justification">Sécurité</td></tr>
+      <tr><td>Sauvegardes de la base</td><td data-l="Durée">14 jours sur le serveur, 30 jours en copie chiffrée chez OVHcloud (France)</td><td data-l="Justification">Restauration en cas d'incident</td></tr>
+    </tbody>
+  </table>
+  <p>Les données arrivées à échéance sont supprimées chaque mois. Une donnée supprimée disparaît des sauvegardes au plus tard 30 jours après. Les durées propres à nos prestataires (Anthropic, Meta, GitHub) sont précisées dans leurs contrats.</p>
+
+  <h2>8. Consentements séparés</h2>
+  <p>Quatre usages dépendent de votre accord, demandé séparément pour chacun :</p>
   <ul>
-    <li><strong>Étudier votre candidature ou votre demande et vous répondre.</strong> Données : prénoms, destination, dates, ce qui vous inquiète, comment vous nous avez connus, e-mail. Base légale : votre consentement, donné en cochant la case du formulaire, que vous pouvez retirer à tout moment.</li>
-    <li><strong>Établir votre devis, conclure et facturer.</strong> Données : noms, e-mail, téléphone, adresse de facturation, devis, factures, échéances. Base légale : l'exécution de notre prestation et notre obligation comptable.</li>
-    <li><strong>Encaisser les trois échéances par carte bancaire.</strong> Données : nom, e-mail, montants, dates et statuts des paiements. Votre numéro de carte est saisi chez Stripe : nous ne le voyons ni ne le conservons. Base légale : l'exécution de notre prestation.</li>
-    <li><strong>Concevoir votre carnet.</strong> Données : prénoms, destination, dates, hôtel, heures d'arrivée et de départ, goûts, rythme, budget. Base légale : l'exécution de notre prestation.</li>
-    <li><strong>Vous accompagner pendant le voyage avec le concierge WhatsApp</strong> (voir plus bas). Base légale : l'exécution de notre prestation.</li>
-    <li><strong>Publier un témoignage, des captures d'échanges anonymisées ou des photos</strong> (carnets offerts). Base légale : votre consentement écrit, donné séparément pour chacun des trois usages et que vous pouvez retirer à tout moment.</li>
-    <li><strong>Répondre à vos demandes sur vos données.</strong> Données : votre identité, votre demande, notre réponse. Base légale : notre obligation légale.</li>
+    <li>la conservation de vos préférences de voyage, pour vos prochains séjours ;</li>
+    <li>la publication d'un témoignage écrit ;</li>
+    <li>la publication d'un extrait de vos échanges avec le concierge, sans votre prénom ni votre numéro ;</li>
+    <li>la publication de photos de votre voyage.</li>
   </ul>
-  <p>Nous ne vous demandons aucune donnée de santé. Merci de ne pas en écrire dans le formulaire ni dans vos messages. Pour une allergie ou un besoin particulier, écrivez directement à l'équipe.</p>
+  <p>Aucune case n'est précochée. Refuser n'a aucune incidence sur votre voyage. Nous gardons la preuve de chaque accord : la date, le texte accepté et sa version. Vous pouvez retirer votre accord à tout moment, aussi simplement que vous l'avez donné, en écrivant à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>. Le retrait vaut pour l'avenir : nous ne publions plus rien vous concernant et retirons le contenu de nos publications.</p>
+  <p>Pour les photos où apparaissent d'autres personnes, vous vous engagez à avoir obtenu leur accord avant de nous les transmettre.</p>
+  <p>Vos préférences de voyage ne contiennent aucune information sur votre santé ou vos convictions (section 3).</p>
 
-  <h2>Le concierge est une intelligence artificielle</h2>
-  <p>Pendant votre voyage, L'Adage met à votre disposition un concierge conversationnel sur WhatsApp. <strong>Ses réponses sont générées par une intelligence artificielle</strong>, à partir du carnet de voyage préparé avec vous. Il vous propose des ajustements de programme mais ne réserve rien en votre nom : vous restez libre de vos choix et de vos réservations. L'équipe L'Adage reste présente derrière lui pour les questions de fond, peut lire les conversations et vous écrire à tout moment : ces messages commencent par « Message de l'équipe L'Adage : ».</p>
-  <p>Le concierge est compris dans les offres Carnet + Concierge et L'Écrin et fonctionne pendant les dates de votre séjour. Dans cette première version, il est réservé au voyageur principal du voyage, dont le numéro WhatsApp figure au devis. Le service est réservé aux personnes majeures : le voyageur principal atteste être majeur en signant le devis. Les messages envoyés par toute autre personne sont ignorés et ne sont pas conservés. Aucune décision produisant des effets juridiques à votre égard n'est prise de manière automatisée.</p>
-  <p>Données traitées par le concierge : votre prénom et votre numéro WhatsApp, la date à laquelle vous avez attesté être majeur (jamais votre date de naissance), le contenu de vos échanges, les informations de votre voyage (destination, dates, programme du carnet). Si vous l'acceptez séparément, vos préférences de voyage (goûts, rythme, points de vigilance) peuvent être conservées pour améliorer vos prochains voyages.</p>
+  <h2>9. Vos droits, réclamation et suppression</h2>
+  <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et de portabilité de vos données. Vous pouvez vous opposer à tout moment aux traitements fondés sur notre intérêt légitime (section 2). Vous pouvez retirer votre consentement à tout moment, sans remettre en cause les traitements déjà effectués. Vous pouvez aussi définir des directives sur le sort de vos données après votre décès.</p>
+  <p>Pour exercer ces droits, écrivez à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>. Nous pouvons vous demander de justifier de votre identité. Nous répondons dans un délai d'un mois. Ce délai peut être prolongé de deux mois si la demande est complexe ; nous vous en informons alors dans le premier mois.</p>
+  <p><strong>Supprimer vos données.</strong> Envoyez « SUPPRIMER MES DONNÉES » par e-mail à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>, ou directement au concierge sur WhatsApp, depuis le numéro concerné. Par e-mail, indiquez votre numéro WhatsApp si vous avez utilisé le concierge. Nous supprimons vos données sous un mois et vous le confirmons. Elles disparaissent de nos sauvegardes au plus tard 30 jours après. Nous gardons seulement ce que la loi nous oblige à conserver : factures et pièces comptables (10 ans), contrat (10 ans) et trace de votre demande (5 ans).</p>
+  <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07).</p>
 
-  <h2>Qui reçoit vos données</h2>
-  <p>Seule l'équipe de L'Adage lit vos données. Nous faisons appel à des prestataires techniques, chacun pour une tâche précise :</p>
-  <ul>
-    <li>Stripe (Irlande), pour les paiements par carte.</li>
-    <li>Meta Platforms (WhatsApp et Instagram ; Irlande et États-Unis), pour l'acheminement des messages du concierge et pour nos échanges sur Instagram.</li>
-    <li>Anthropic (États-Unis), pour mettre en forme les carnets et générer les réponses du concierge. Les données transmises par son API ne servent pas à entraîner ses modèles.</li>
-    <li>OVHcloud (France), pour l'hébergement du serveur qui orchestre le concierge.</li>
-    <li>Supabase (base de données hébergée dans l'Union européenne, à Paris), pour la conservation de vos messages et de votre voyage.</li>
-    <li>Google (États-Unis possible), pour la messagerie, le stockage des carnets et l'envoi des alertes internes à l'équipe.</li>
-    <li>GitHub (États-Unis), pour l'hébergement de ce site. Aucune donnée de client n'y est déposée.</li>
-  </ul>
-  <p>Certains de ces prestataires sont situés hors de l'Union européenne, notamment aux États-Unis : Anthropic, Google, GitHub, Meta, ainsi que la société mère de Supabase et le groupe Stripe. Ces transferts sont encadrés par des garanties appropriées : clauses contractuelles types de la Commission européenne (par exemple pour Anthropic et Supabase) ou cadre de protection des données UE–États-Unis, le Data Privacy Framework (par exemple pour Stripe), selon le prestataire. Pour en savoir plus sur ces garanties, écrivez à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>.</p>
+  <h2>10. Cookies et journaux techniques</h2>
+  <p>Le site ladage-voyage.fr ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Il ne charge aucun contenu tiers : ses polices sont hébergées sur le site lui-même. Aucun bandeau de consentement n'est donc nécessaire.</p>
+  <p>Comme tout hébergeur, GitHub (États-Unis) enregistre l'adresse IP des visiteurs pour faire fonctionner le site et le protéger contre les abus. Ce traitement repose sur l'intérêt légitime lié à la sécurité (section 2). Le transfert vers les États-Unis est encadré comme indiqué en section 6. Les journaux du serveur du concierge, hébergé chez OVHcloud en France, sont conservés 7 jours.</p>
 
-  <h2>Durées de conservation</h2>
-  <ul>
-    <li>Candidats non retenus : 6 mois après la fin de la sélection. Autres demandes restées sans suite : 12 mois après le dernier contact.</li>
-    <li>Factures et pièces comptables : 10 ans. Devis et contrat : 5 ans après la fin de la relation.</li>
-    <li>Carte bancaire enregistrée chez Stripe : supprimée dès la dernière échéance payée ou à la fin du contrat. Historique des paiements : 10 ans.</li>
-    <li>Carnet et informations de préparation : 3 ans après la fin du voyage, sauf demande de suppression plus tôt.</li>
-    <li>Échanges avec le concierge : 12 mois.</li>
-    <li>Prénom, numéro WhatsApp et informations de voyage utilisés par le concierge : 3 ans après la fin de votre dernier voyage avec nous.</li>
-    <li>Préférences de voyage, si vous les avez acceptées : jusqu'au retrait de votre consentement, et au plus tard 3 ans après la fin de votre dernier voyage.</li>
-    <li>Journaux techniques du serveur : 7 jours ; sauvegardes de la base : 14 jours sur le serveur, 30 jours en copie chiffrée chez OVHcloud (France).</li>
-    <li>Témoignages, captures et photos : 2 ans après la publication, puis nouvel accord de votre part.</li>
-    <li>Demandes sur vos données : 5 ans.</li>
-  </ul>
-  <p>Les données échues sont supprimées chaque mois.</p>
-
-  <h2>Vos droits</h2>
-  <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment, sans effet sur ce qui a eu lieu avant. Pour les exercer, écrivez à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>. Nous répondons sous un mois et pouvons vous demander de justifier votre identité.</p>
-  <p>Vous pouvez aussi adresser une réclamation à la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
-
-  <h2>Suppression de vos données</h2>
-  <p>Pour faire supprimer l'ensemble de vos données, écrivez « SUPPRIMER MES DONNÉES » à <a href="mailto:contact@ladage-voyage.fr">contact@ladage-voyage.fr</a>, en indiquant le numéro WhatsApp concerné si vous avez utilisé le concierge. La suppression est effectuée sous un mois et vous est confirmée. Les données effacées peuvent subsister jusqu'à 30 jours dans nos sauvegardes chiffrées, puis disparaissent. Nous conservons seulement ce que la loi nous impose de garder, comme les factures.</p>
-
-  <h2>Cookies</h2>
-  <p>Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Son hébergeur, GitHub, enregistre techniquement l'adresse IP des visiteurs pour assurer son fonctionnement.</p>
-
-  <h2>Mise à jour</h2>
+  <h2>11. Mise à jour</h2>
   <p>Nous modifions cette politique si nos outils ou nos usages changent. La date de dernière mise à jour figure en haut de la page.</p>
 </main>
 <footer>© 2026 L'Adage · <a href="mentions-legales.html">Mentions légales</a> · <a href="./">Retour à l'accueil</a></footer>
