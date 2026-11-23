@@ -32,8 +32,7 @@
     { el: "dates", ok: datesValides, msg: "Indiquez un départ entre le 1er février et le 30 avril 2027, et un retour après le départ.", cible: "#aller, #retour" },
     { el: "inquiete", ok: function (f) { return f.inquiete.value.trim().length >= 5; }, msg: "Dites-nous en quelques mots ce qui vous inquiète." },
     { el: "source", ok: function (f) { return f.source.value !== ""; }, msg: "Choisissez une réponse." },
-    { el: "email", ok: function (f) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim()); }, msg: "Vérifiez votre adresse e-mail, par exemple claire@exemple.fr." },
-    { el: "accord", ok: function (f) { return f.accord.checked; }, msg: "Cochez la case pour que nous puissions étudier votre candidature." }
+    { el: "email", ok: function (f) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim()); }, msg: "Vérifiez votre adresse e-mail, par exemple claire@exemple.fr." }
   ];
 
   function datesValides(f) {
@@ -98,9 +97,7 @@
       "Dates : du " + dateFr(f.aller.value) + " au " + dateFr(f.retour.value),
       "Ce qui nous inquiète : " + f.inquiete.value.trim(),
       "Comment nous avons connu L’Adage : " + source,
-      "E-mail : " + f.email.value.trim(),
-      "",
-      "Nous acceptons que L’Adage utilise ces informations pour étudier notre candidature et nous recontacter."
+      "E-mail : " + f.email.value.trim()
     ].join("\n");
     var lien = "mailto:" + DESTINATAIRE + "?subject=" + encodeURIComponent("Candidature aux premiers volumes · " + f.prenoms.value.trim()) + "&body=" + encodeURIComponent(texte);
     document.getElementById("copie").value = texte;
